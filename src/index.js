@@ -11,6 +11,9 @@ import Order from "./Order";
   dataStore.loadData()
     .then(() => {
       products.render();
+      order.update();
+      document.querySelector("#order-btn").addEventListener("click", () => { 
+        order.send()});
     });
 
 })();
